@@ -1,0 +1,24 @@
+package Products;
+
+public class Car extends Product{
+    private double maxSpeed;
+    public Car(){
+        super("car", "name", 0);
+        maxSpeed = 0;
+    }
+    public Car(Car c){
+        super(c);
+        this.maxSpeed = c.maxSpeed;
+    }
+    public Car(String name, double mass, double maxSpeed){
+        super("car", name, mass);
+        this.maxSpeed = maxSpeed;
+    }
+    
+    public double getMaxSpeed(){
+        return maxSpeed;
+    }
+    public void setMaxSpeed(double ms){
+        this.maxSpeed = ms;
+    }
+}
